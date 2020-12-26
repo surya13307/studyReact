@@ -1,0 +1,66 @@
+{
+    "results": [
+        {
+            "gender": "male",
+            "name": {
+                "title": "Monsieur",
+                "first": "Samuel",
+                "last": "Bonnet"
+            },
+            "location": {
+                "street": {
+                    "number": 3124,
+                    "name": "Rue de L'Église"
+                },
+                "city": "Seehof",
+                "state": "Jura",
+                "country": "Switzerland",
+                "postcode": 4339,
+                "coordinates": {
+                    "latitude": "-55.9877",
+                    "longitude": "-166.8420"
+                },
+                "timezone": {
+                    "offset": "-9:00",
+                    "description": "Alaska"
+                }
+            },
+            "email": "samuel.bonnet@example.com",
+            "login": {
+                "uuid": "d1149c6a-454f-45a6-b722-d4e35128d144",
+                "username": "bigdog862",
+                "password": "hope",
+                "salt": "svq7vNy0",
+                "md5": "72105a435d891bd40d52e3cc69035191",
+                "sha1": "d5f60665b5bb9bd28978d76dde7b58e08de47ac4",
+                "sha256": "45e7ec3420402c9e31b425c944828da24747884d95c5e3e92902a5abb7569dc8"
+            },
+            "dob": {
+                "date": "1961-05-12T12:19:02.222Z",
+                "age": 59
+            },
+            "registered": {
+                "date": "2018-02-11T14:23:50.955Z",
+                "age": 2
+            },
+            "phone": "075 158 02 27",
+            "cell": "078 221 26 21",
+            "id": {
+                "name": "AVS",
+                "value": "756.6293.9460.01"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/men/20.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/men/20.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/men/20.jpg"
+            },
+            "nat": "CH"
+        }
+    ],
+    "info": {
+        "seed": "edf4a84692598e32",
+        "results": 1,
+        "page": 1,
+        "version": "1.3"
+    }
+}
