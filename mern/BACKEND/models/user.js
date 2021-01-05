@@ -22,7 +22,6 @@ var userSchema = new mongoose.Schema({
     },
     userinfo: {
         type: String,
-        required: true
     },
     encry_password: {
         type: String
@@ -39,6 +38,8 @@ var userSchema = new mongoose.Schema({
 
 },{timestamps : true});
 
+
+//NOTE : making salts to encrypt password on the go
 userSchema.virtual("password")
     .set(function (password) {
         this._password = password;
@@ -49,17 +50,17 @@ userSchema.virtual("password")
         return this._password
     })
 
-userSchema.method = {
+userSchema.methods = {
 
     authenticate: function (plainpassword) {
-        return this.securePassword(plainpassword) === this.encry_password
+        return this.securePassword(plainpassword) === this.encry_password;
     },
-
+//NOTE : encrypting password using crypto packet !!
     securePassword: function (plainpassword) {
-        if (!password) return "";
+        if (!plainpassword) return "";
         try {
             return crypto
-                .createHmac('sha256', secret)
+                .createHmac('sha256', this.salt)
                 .update(plainpassword)
                 .digest('hex');
         } catch (err) {

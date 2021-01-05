@@ -16,9 +16,7 @@ const productCartSchema = new mongoose.Schema({
 const ProductCart = mongoose.model("ProductCart",productCartSchema);
 
 const orderSchema = new mongoose.Schema({
-    products: [
-        productCartSchema
-    ],
+    products: [productCartSchema],
     transaction_id: {},
     amount: {
         type: Number
@@ -37,5 +35,5 @@ const orderSchema = new mongoose.Schema({
 
 const Order = mongoose.model("Order", orderSchema);
 
-
+//NOTE: Multiple Schema (exporting multiple schemas)
 module.exports = {Order,ProductCart};
