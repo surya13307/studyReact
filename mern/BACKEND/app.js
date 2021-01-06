@@ -10,6 +10,8 @@ const cors = require("cors");
 //SECTION : my Routes
 const authRoutes = require('./routes/auth')
 const userRoutes = require('./routes/user')
+const categoryRoutes = require('./routes/category')
+const productRoutes = require('./routes/product')
 
 
 
@@ -33,6 +35,9 @@ app.use(cors());
 //NOTE : injected middlewares
 app.use('/api', authRoutes);
 app.use('/api', userRoutes);
+app.use('/api', categoryRoutes);
+app.use('/api', productRoutes);
+
 
 // SECTION : PORT
 const port = process.env.PORT;

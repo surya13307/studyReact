@@ -11,7 +11,7 @@ exports.signout = (req, res) => {
     //NOTE : clearing token from cookies
     res.clearCookie("token");
     res.json({
-        message : "Bye bye user"
+        message : "user signed out"
     })    
 };
 
@@ -37,7 +37,7 @@ exports.signin = (req, res) => {
         }
         if (!user.authenticate(password)) { 
             return res.status(401).json({
-                error: "Incorrect password"
+                error: "Incorrect password for the given user id"
             })
         }
         //NOTE : creating token
@@ -105,7 +105,7 @@ exports.isAuthenticated = (req , res , next) => {
 exports.isAdmin = (req, res , next) =>{
     if (req.profile.role === 0) {
         return res.status(403).json({
-            error : "Access denied"
+            error : "Access denied ,  permited section for admins only"
         })
     }
     next();
