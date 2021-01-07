@@ -6,8 +6,8 @@ const { check } = require('express-validator');
 //NOTE : method with express validation for signup
 router.post("/signup",[
 check('name').isLength({min : 3}).withMessage('Name should contain minimum 3 letter') ,
-check('email').isEmail().withMessage('Email is required'),
-check('password').isLength({ min: 5 }).withMessage('password must be at least 5 chars long')
+check('email').isEmail().withMessage('Incorrect Email Format'),
+check('password').isLength({ min: 5 }).withMessage('password must be at least 6 chars long')
 ],signup);
 
 //NOTE : method with express validation for signin
